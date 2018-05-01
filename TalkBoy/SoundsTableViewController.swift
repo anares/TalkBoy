@@ -1,5 +1,5 @@
 //
-//  TalkBoyTableViewController.swift
+//  SoundsTableViewController.swift
 //  TalkBoy
 //
 //  Created by Ivaylo Yosifov on 1/5/18.

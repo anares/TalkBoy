@@ -12,8 +12,8 @@
 		0A183A5E20986CA300E2DB7B /* TalkBoy.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 0A183A5C20986CA300E2DB7B /* TalkBoy.xcdatamodeld */; };
 		0A183A6020986CA300E2DB7B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0A183A5F20986CA300E2DB7B /* Assets.xcassets */; };
 		0A183A6320986CA300E2DB7B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0A183A6120986CA300E2DB7B /* LaunchScreen.storyboard */; };
-		0A183A6B209872F200E2DB7B /* SoundsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A183A6A209872F200E2DB7B /* SoundsTableViewController.swift */; };
-		0A183A6D2098732600E2DB7B /* CreateSoundViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A183A6C2098732600E2DB7B /* CreateSoundViewController.swift */; };
+		0A183A6F20988E5500E2DB7B /* CreateSoundViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A183A6E20988E5500E2DB7B /* CreateSoundViewController.swift */; };
+		0A183A7120988E8300E2DB7B /* SoundsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A183A7020988E8300E2DB7B /* SoundsTableViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,8 +24,8 @@
 		0A183A5F20986CA300E2DB7B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0A183A6220986CA300E2DB7B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		0A183A6420986CA300E2DB7B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		0A183A6A209872F200E2DB7B /* SoundsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SoundsTableViewController.swift; sourceTree = "<group>"; };
-		0A183A6C2098732600E2DB7B /* CreateSoundViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateSoundViewController.swift; sourceTree = "<group>"; };
+		0A183A6E20988E5500E2DB7B /* CreateSoundViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateSoundViewController.swift; sourceTree = "<group>"; };
+		0A183A7020988E8300E2DB7B /* SoundsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SoundsTableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,9 +59,9 @@
 			isa = PBXGroup;
 			children = (
 				0A183A5520986CA300E2DB7B /* AppDelegate.swift */,
-				0A183A6C2098732600E2DB7B /* CreateSoundViewController.swift */,
-				0A183A6A209872F200E2DB7B /* SoundsTableViewController.swift */,
+				0A183A6E20988E5500E2DB7B /* CreateSoundViewController.swift */,
 				0A183A5920986CA300E2DB7B /* Main.storyboard */,
+				0A183A7020988E8300E2DB7B /* SoundsTableViewController.swift */,
 				0A183A5F20986CA300E2DB7B /* Assets.xcassets */,
 				0A183A6120986CA300E2DB7B /* LaunchScreen.storyboard */,
 				0A183A6420986CA300E2DB7B /* Info.plist */,
@@ -141,10 +141,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0A183A6B209872F200E2DB7B /* SoundsTableViewController.swift in Sources */,
-				0A183A6D2098732600E2DB7B /* CreateSoundViewController.swift in Sources */,
 				0A183A5E20986CA300E2DB7B /* TalkBoy.xcdatamodeld in Sources */,
+				0A183A7120988E8300E2DB7B /* SoundsTableViewController.swift in Sources */,
 				0A183A5620986CA300E2DB7B /* AppDelegate.swift in Sources */,
+				0A183A6F20988E5500E2DB7B /* CreateSoundViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
