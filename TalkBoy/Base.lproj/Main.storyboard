@@ -19,7 +19,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="mA4-2X-YhQ">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="mainReusableCell" id="mA4-2X-YhQ">
                                 <rect key="frame" x="0.0" y="28" width="375" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="mA4-2X-YhQ" id="BY3-qh-1GT">
@@ -37,7 +37,7 @@
                         <barButtonItem key="backBarButtonItem" title="Back" id="EeU-oI-DH8"/>
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="yNZ-0v-I10">
                             <connections>
-                                <segue destination="5lG-J3-Rfz" kind="show" id="bPf-Xi-J8s"/>
+                                <segue destination="5lG-J3-Rfz" kind="show" identifier="moveToCreate" id="bPf-Xi-J8s"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -54,41 +54,51 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" selected="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WCA-gs-cVZ">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WCA-gs-cVZ">
                                 <rect key="frame" x="60" y="164" width="49" height="30"/>
+                                <color key="tintColor" red="1" green="0.10892331280000001" blue="0.2204659521" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <state key="normal" title="Record"/>
                                 <connections>
                                     <action selector="recordTapped:" destination="5lG-J3-Rfz" eventType="touchUpInside" id="Oly-mV-aYX"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DDH-wZ-QNN">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DDH-wZ-QNN">
                                 <rect key="frame" x="285" y="164" width="30" height="30"/>
                                 <state key="normal" title="Play"/>
                                 <connections>
                                     <action selector="playTapped:" destination="5lG-J3-Rfz" eventType="touchUpInside" id="Y8m-M8-iDQ"/>
                                 </connections>
                             </button>
-                            <textField opaque="NO" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="WkJ-Oz-RB5">
+                            <textField opaque="NO" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Sound Title" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="WkJ-Oz-RB5">
                                 <rect key="frame" x="60" y="104" width="255" height="30"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kPR-fM-aIg">
+                            <button opaque="NO" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kPR-fM-aIg">
                                 <rect key="frame" x="172" y="164" width="30" height="30"/>
                                 <state key="normal" title="Add"/>
                                 <connections>
                                     <action selector="addTapped:" destination="5lG-J3-Rfz" eventType="touchUpInside" id="R6g-Cb-JAB"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" enabled="NO" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Da2-kl-flI">
+                                <rect key="frame" x="30" y="402" width="315" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="1" green="0.10892331280000001" blue="0.2204659521" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="6jE-TF-3hU" firstAttribute="trailing" secondItem="DDH-wZ-QNN" secondAttribute="trailing" constant="60" id="BMY-7l-k8X"/>
                             <constraint firstItem="WCA-gs-cVZ" firstAttribute="leading" secondItem="6jE-TF-3hU" secondAttribute="leading" constant="60" id="NW0-3k-2ke"/>
+                            <constraint firstItem="Da2-kl-flI" firstAttribute="leading" secondItem="6jE-TF-3hU" secondAttribute="leading" constant="30" id="PCL-rq-e9F"/>
                             <constraint firstItem="WkJ-Oz-RB5" firstAttribute="top" secondItem="6jE-TF-3hU" secondAttribute="top" constant="40" id="PZh-pg-NcK"/>
                             <constraint firstItem="kPR-fM-aIg" firstAttribute="centerX" secondItem="hc1-0P-O6A" secondAttribute="centerX" id="QfM-wh-Hid"/>
+                            <constraint firstItem="6jE-TF-3hU" firstAttribute="trailing" secondItem="Da2-kl-flI" secondAttribute="trailing" constant="30" id="dm0-JK-Sn5"/>
                             <constraint firstItem="WkJ-Oz-RB5" firstAttribute="leading" secondItem="6jE-TF-3hU" secondAttribute="leading" constant="60" id="feP-oV-BZm"/>
+                            <constraint firstItem="Da2-kl-flI" firstAttribute="centerX" secondItem="hc1-0P-O6A" secondAttribute="centerX" id="g1U-Ey-6Wb"/>
                             <constraint firstItem="6jE-TF-3hU" firstAttribute="trailing" secondItem="WkJ-Oz-RB5" secondAttribute="trailing" constant="60" id="hj9-jO-oZ7"/>
                             <constraint firstItem="kPR-fM-aIg" firstAttribute="top" secondItem="WkJ-Oz-RB5" secondAttribute="bottom" constant="30" id="isR-3x-1F3"/>
                             <constraint firstItem="DDH-wZ-QNN" firstAttribute="top" secondItem="WkJ-Oz-RB5" secondAttribute="bottom" constant="30" id="lHg-ff-HP8"/>
@@ -99,6 +109,7 @@
                     <navigationItem key="navigationItem" id="6vX-kP-gOZ"/>
                     <connections>
                         <outlet property="addButton" destination="kPR-fM-aIg" id="RdQ-jb-Ubu"/>
+                        <outlet property="errorLabel" destination="Da2-kl-flI" id="CA7-Tk-Rnn"/>
                         <outlet property="playButton" destination="DDH-wZ-QNN" id="nb2-pu-dII"/>
                         <outlet property="recordButton" destination="WCA-gs-cVZ" id="dtb-fc-Ko4"/>
                         <outlet property="titleField" destination="WkJ-Oz-RB5" id="OUM-FD-wXf"/>
